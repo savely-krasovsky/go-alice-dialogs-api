@@ -1,6 +1,6 @@
 package aliceapi
 
-type Req struct {
+type req struct {
 	Meta    meta    `json:"meta"`
 	Request Request `json:"request"`
 	Session session `json:"session"`
@@ -19,7 +19,7 @@ type markup struct {
 	DangerousContext bool `json:"dangerous_context"`
 }
 
-type Res struct {
+type res struct {
 	Response Response `json:"response"`
 	Session  session  `json:"session"`
 	Version  string      `json:"version"`

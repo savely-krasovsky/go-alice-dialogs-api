@@ -15,13 +15,13 @@ func Handle(pattern string, handler func (Request) (Response)) {
 			log.Fatal(err)
 		}
 
-		var req Req
+		var req req
 		err = json.Unmarshal(bytes, &req)
 		if err != nil {
 			log.Fatal(err)
 		}
 
-		response := Res{
+		response := res{
 			Version: req.Version,
 			Session: req.Session,
 			Response: handler(req.Request),
